@@ -1,0 +1,42 @@
+version: '3'
+ 
+services:
+  db:
+    image: mysql:5.7
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: arduino
+      MYSQL_USER: javier #usuario
+      MYSQL_PASSWORD: root #contraseña
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbarduino:/var/lib/mysql
+ 
+  www:
+    image: php:7.3-apache
+    container_name: web
+    ports: 
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - db
+    networks:
+      - default
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8080:80
+volumes:
+  dbarduino:

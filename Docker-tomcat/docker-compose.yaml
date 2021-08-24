@@ -1,0 +1,11 @@
+
+version: '3.7'
+services:
+   tomcat:
+      container_name: tomcat
+      image: tomcat
+      volumes:
+         - ./example/myapp.war:/usr/local/tomcat/webapps/myapp.war
+      ports:
+         - "8080:8080"
+
