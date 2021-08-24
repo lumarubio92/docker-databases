@@ -6,7 +6,7 @@ services:
     environment:
       MYSQL_DATABASE: "ejemplo"
       MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_USER: "javier" 
+      MYSQL_USER: "usuario" 
       MYSQL_PASSWORD: "root"
       
   adminer:

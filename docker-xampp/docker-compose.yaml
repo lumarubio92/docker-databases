@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: arduino
-      MYSQL_USER: javier #usuario
+      MYSQL_USER: usuario #nom usuario
       MYSQL_PASSWORD: root #contraseña
     ports:
       - "3306:3306"

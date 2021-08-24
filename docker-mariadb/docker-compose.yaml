@@ -4,7 +4,7 @@ services:
     image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MARIADB_USER: javier
+      MARIADB_USER: usuario
       MARIADB_PASSWORD: root
     ports:
       - "3306:3306"

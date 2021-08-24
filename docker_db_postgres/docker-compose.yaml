@@ -18,10 +18,4 @@ services:
     dns:
       - 127.0.0.1
 
-    
-
-  #adminer:
-  #  image: adminer
-  #  restart: always
-  #  ports:
-  #    - 8080:8080
+  
